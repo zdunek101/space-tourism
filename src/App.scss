@@ -1,7 +1,6 @@
 @import "components/settings/reset.scss";
 @import "components/settings/colorsFonts.scss";
 
-
 .navBar {
   display: flex;
   justify-content: space-between;
@@ -9,7 +8,6 @@
 
 .menu_btn {
   cursor: pointer;
-
 
   span {
     display: block;
@@ -51,140 +49,138 @@
   margin-top: -250px;
 
   ul li {
-
     cursor: pointer;
     margin-bottom: 32px;
   }
 
+  .navigation#open {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: right;
+    text-align: left;
 
+    height: calc(100vh - 118px);
+    width: 66vw;
 
-.navigation#open {
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-  flex-direction: column;
-  justify-content: right;
-  text-align: left;
-
-  height: calc(100vh - 118px);
-  width: 66vw;
-
-  z-index: 3;
-  margin-top: 0px;
-  padding-top: 118px;
-  padding-left: 40px;
-  backdrop-filter: blur(40px);
-  ul {
-    padding-left: 24px;
+    z-index: 3;
+    margin-top: 0px;
+    padding-top: 118px;
+    padding-left: 40px;
+    backdrop-filter: blur(40px);
+    ul {
+      padding-left: 24px;
+    }
   }
-}
 
-.logo {
-  max-width: 40px;
-  max-height: 40px;
-  margin: 24px 0 0 24px;
-}
+  .logo {
+    max-width: 40px;
+    max-height: 40px;
+    margin: 24px 0 0 24px;
+  }
 
-.nav_links {
-  text-decoration: none;
-  color: $color_title;
-  font-family: $second_font;
-  font-size: 16px;
-  font-weight: 400;
-  z-index: 100;
-
-  .nav_links-number {
+  .nav_links {
     text-decoration: none;
     color: $color_title;
     font-family: $second_font;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     z-index: 100;
-    margin-right: 11px;
+
+    .nav_links-number {
+      text-decoration: none;
+      color: $color_title;
+      font-family: $second_font;
+      font-size: 16px;
+      font-weight: 700;
+      z-index: 100;
+      margin-right: 11px;
+    }
   }
-}
 
-@media (min-width: 376px) {
-  .logo {
-    max-width: 48px;
-    max-height: 48px;
-    margin: 24px 0 0 40px;
+  @media (min-width: 376px) {
+    .logo {
+      max-width: 48px;
+      max-height: 48px;
+      margin: 24px 0 0 40px;
+    }
   }
-}
 
-@media (min-width: 768px) {
-  .navigation {
-    display: flex;
-    width: 55%;
-    background-color: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(12px);
-    margin-top: 0;
-
-    ul {
+  @media (min-width: 768px) {
+    .navigation {
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
+      width: 55%;
+      background-color: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(12px);
+      margin-top: 0;
 
-      li {
-        padding: 0;
-        margin-bottom: 0;
-        a.active {
-          padding: 0 0 24px 0;
-          box-shadow: 0px 3px 0px 0px $color_title;
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+
+        li {
+          padding: 0;
+          margin-bottom: 0;
+          a.active {
+            padding: 0 0 24px 0;
+            box-shadow: 0px 3px 0px 0px $color_title;
+          }
         }
       }
     }
-  }
-  .navigation#open {
-    display: none;
-  }
-  .menu_btn {
-    display: none;
-  }
-  .nav_links-number {
-    display: none;
-  }
-}
-
-@media (min-width: 1200px) {
-  .navBar {
-    position: relative;
-    height: 90px;
-    margin-top: 40px;
-    &:before {
-      content: "";
-      position: absolute;
-      z-index: 101;
-      height: 1px;
-
-      width: 38%;
-      background-color: $color_text;
-      opacity: 25%;
-      top: 50%;
-      left: 10%;
+    .navigation#open {
+      display: none;
+    }
+    .menu_btn {
+      display: none;
+    }
+    .nav_links-number {
+      display: none;
     }
   }
 
-  .navigation {
-    .nav_links.active {
-      padding: 0 0 32px 0;
-      box-shadow: 0px 3px 0px 0px $color_title;
-    }
-    .nav_links {
-      &:hover {
-        box-shadow: 0px 3px 0px 0px rgba(255, 255, 255, 0.5);
-        padding: 0 0 32px 0;
+  @media (min-width: 1200px) {
+    .navBar {
+      position: relative;
+      height: 90px;
+      margin-top: 40px;
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: 101;
+        height: 1px;
+
+        width: 38%;
+        background-color: $color_text;
+        opacity: 25%;
+        top: 50%;
+        left: 10%;
       }
     }
-  }
-  .logo {
-    margin-top: 21px;
-  }
 
-  .nav_links-number {
-    display: inherit;
+    .navigation {
+      .nav_links.active {
+        padding: 0 0 32px 0;
+        box-shadow: 0px 3px 0px 0px $color_title;
+      }
+      .nav_links {
+        &:hover {
+          box-shadow: 0px 3px 0px 0px rgba(255, 255, 255, 0.5);
+          padding: 0 0 32px 0;
+        }
+      }
+    }
+    .logo {
+      margin-top: 21px;
+    }
+
+    .nav_links-number {
+      display: inherit;
+    }
   }
 }
