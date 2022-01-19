@@ -28,13 +28,6 @@ const Carousel = ({ children, sectionName, countButton }) => {
     onSwipedRight: () => updateIndex(activeIndex - 1),
   });
 
-  //   const CarouselButton = ({ children, sectionName, activeIndex, updateIndex, countButton }) => {
-  //     return (
-
-  //       // <p>Bleble</p>
-  //     );
-  //   };
-
   return (
     <div {...handlers} className={`${sectionName}_carousel carousel`}>
       <div className={`${sectionName}_inner inner`} style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
@@ -61,20 +54,3 @@ const Carousel = ({ children, sectionName, countButton }) => {
 };
 
 export default Carousel;
-
-{
-  /* <div className={`${sectionName}_indicators`}>
-  {React.Children.map(children, (child, index) => {
-    return (
-      <button
-        className={`${sectionName}_button ${index === activeIndex ? "active" : ""}`}
-        onClick={() => {
-          updateIndex(index);
-        }}
-      >
-        {countButton === true ? index + 1 : ""}
-      </button>
-    );
-  })}
-</div>; */
-}

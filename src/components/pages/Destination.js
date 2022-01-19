@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, NavLink as Link, useLocation } from "react-router-dom";
-// import Europa from "./destination/Europa";
-// import Titan from "./destination/Titan";
-// import Moon from "./destination/Moon";
-// import Mars from "./destination/Mars";
 
 import "../css/Destination.scss";
 

@@ -100,10 +100,6 @@ const Technology = () => {
             </div>
           </div>
         </CarouselItem>
-
-        {/* <CarouselItem>Item1</CarouselItem>
-      <CarouselItem>Item2</CarouselItem>
-      <CarouselItem>Item3</CarouselItem> */}
       </Carousel>
     </>
   );

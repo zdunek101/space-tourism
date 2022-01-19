@@ -44,35 +44,9 @@ const Layout = () => {
   const [status, setStatus] = useState("close");
   const [background, setBackground] = useState("home_background");
   const node = useRef();
-  const refClick = useRef();
-  let { innerWidth: width } = window;
-
-  // useEffect(() => {
-  //   console.log(width);
-
-  //   if (width) {
-  //     document.addEventListener("mousedown", handleClickNav);
-  //     console.log("jest");
-  //   } else {
-  //     document.removeEventListener("mousedown", handleClickNav);
-  //   }
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickNav);
-  //   };
-  // }, [width]);
-
-  // const handleClickNav = (e) => {
-  //   if (refClick.current.contains(e.target)) {
-  //     console.log("click");
-
-  //     setStatus("close");
-  //   }
-  //   return;
-  // };
 
   const handleClickOutside = (e) => {
     if (node.current.contains(e.target)) {
-      // console.log("clicking anywhere");
       return;
     }
     setStatus("close");
@@ -122,54 +96,22 @@ const Layout = () => {
             <nav ref={node} className="navigation" id={`${status}`}>
               <ul>
                 <li>
-                  <Link
-                    to="/"
-                    className="nav_links"
-                    // onClick={() => setBackground("home_background")}
-                    // onClick={HandleClick}
-                    // ref={refClick}
-                    activeClassName="active"
-                    end
-                  >
+                  <Link to="/" className="nav_links" activeClassName="active" end>
                     <span className="nav_links-number">00</span>HOME
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/destination"
-                    className="nav_links"
-                    // onClick={() => setBackground("destination_background")}
-                    // onClick={HandleClick}
-                    // ref={refClick}
-                    activeClassName="active"
-                    end
-                  >
+                  <Link to="/destination" className="nav_links" activeClassName="active" end>
                     <span className="nav_links-number">01</span> DESTINATION
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/crew"
-                    className="nav_links"
-                    // onClick={() => setBackground("crew_background")}
-                    // onClick={HandleClick}
-                    // ref={refClick}
-                    activeClassName="active"
-                    end
-                  >
+                  <Link to="/crew" className="nav_links" activeClassName="active" end>
                     <span className="nav_links-number">02</span>CREW
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/technology"
-                    className="nav_links"
-                    // onClick={() => setBackground("technology_background")}
-                    // onClick={HandleClick}
-                    // ref={refClick}
-                    activeClassName="active"
-                    end
-                  >
+                  <Link to="/technology" className="nav_links" activeClassName="active" end>
                     <span className="nav_links-number">03</span>TECHNOLOGY
                   </Link>
                 </li>
